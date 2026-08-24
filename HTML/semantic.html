@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semantic tags</title>
+
+    <style>
+              *{
+                 padding: 0;
+                 margin: 0;
+                 box-sizing: border-box;
+              }
+
+              nav{
+                background-color: purple;
+                color:white;
+                height: 80px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+              }
+
+              ul{
+                display: flex;
+                gap:20px;
+                list-style: none;
+              }
+
+              li{
+                font-size: 19px;
+                text-transform: uppercase;
+                font-weight: bold;
+                cursor: pointer;
+              }
+
+
+              header{
+                 height: 250px;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-items: center;
+                 gap:20px;
+                 background-color: lightpink;
+              }
+
+              main{
+                 height: 200px;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-items: center;
+                 background-color: coral;
+              }
+
+              section{
+                 height: 300px;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-items: center;
+              }
+
+              figure{
+                border-radius: 15px;
+                box-shadow: 0px 8px 15px gray;
+                height: 250px;
+                width: 350px;
+                padding: 15px;
+              }
+
+              img{
+                border-radius: 15px;
+              }
+
+              figcaption{
+                text-align: center;
+                font-weight: bold;
+              }
+
+              article{
+                 height: 250px;
+                 display: grid;
+                 grid-template-columns: 1fr 1fr;
+              }
+
+              aside{
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-items: center;
+              }
+
+              article aside:nth-child(1)
+              {
+                background-color: cadetblue;
+              }
+              article aside:nth-child(2)
+              {
+                background-color: limegreen;
+              }
+
+              footer{
+                height: 100px;
+                background-color: bisque;
+                display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-items: center;
+              }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <h2>myLogo</h2>
+        
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>welcome to semantic tag session</h1>
+        <p>here we will get to know how to use semantic tags in html and what is the meaning of these tags.</p>
+        <button>get started</button>
+    </header>
+
+    <main>
+           <h1>this is main tag</h1>
+    </main>
+
+
+    <section>
+
+        <figure>
+            <img src="https://images.pexels.com/photos/694636/pexels-photo-694636.jpeg" alt="" height="200">
+
+            <figcaption>mountain image</figcaption>
+        </figure>
+    </section>
+
+    <article>
+         <aside>
+              <h2>I am left</h2>
+         </aside>
+
+         <aside>
+             <h2> I am right</h2>
+         </aside>
+    </article>
+
+    <footer>
+          <details>
+               <summary>nb41 batch</summary>
+               <p>nb41 is best batch I have taken in qspiders</p>
+          </details>
+    </footer>
+</body>
+</html>
+
+
+
