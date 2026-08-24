@@ -1,0 +1,105 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+nav{
+    background-color: black;
+    color:white;
+    height: 80px;
+}
+
+main{
+    height: 500px;
+    background-color: pink;
+}
+
+main > .card1{
+    height: 200px;
+    width: 300px;
+    background-color: lightgreen;
+    /* padding: 10px; */
+    /* padding: 10px 15px 5px 20px   ; */
+
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+
+    border: 3px solid black;
+
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+main > .card2{
+    height: 250px;
+    width: 400px;
+    background-color: lightslategray;
+    border: 5px solid blue;
+
+    padding: 5px;
+}
+
+
+.card1 > h2{
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+.card1 > p{
+    border: 3px solid blue;
+
+}
+
+nav > button{
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+
+section > .card3{
+    height: 200px;
+    width: 300px;
+    background-color: yellow;
+    padding: 30px;
+    border: 50px solid black;
+}
+section > .card4{
+    height: 200px;
+    width: 300px;
+    background-color: red;
+}
+
+
+.box1{
+  background-color: lightpink;
+  height: 200px;
+  width: 300px;
+  margin: 20px  auto ;
+/* 
+  border-width: 3px;
+  border-style: solid;
+  border-color: black; */
+
+  border: 3px solid black;
+  border-radius: 20px;
+
+
+
+}
+
+.box2{
+    height: 300px;
+    width: 400px;
+    background-color: lightgreen;
+    margin: 20px auto;
+
+    border-top: 10px solid black;
+    border-right: 10px dashed red;
+    border-bottom: 10px dotted blue;
+    border-left: 10px double purple;
+
+   border-radius: 20px;
+}

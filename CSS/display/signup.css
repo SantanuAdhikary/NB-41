@@ -1,0 +1,78 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+section{
+    /* border: 2px solid black; */
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px 30px;
+    box-shadow: 2px 4px 10px black;
+    border-radius: 15px;
+    background-color: white;
+}
+
+section > h1{
+    letter-spacing: 1.9px;
+    margin-bottom: 10px;
+}
+
+section > p:nth-child(2){
+    font-size: 21px;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+section > form > label{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    margin-bottom: 10px;
+}
+section > form > input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-bottom: 10px;
+}
+
+section button{
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    border: none;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+section > #info{
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+section > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}

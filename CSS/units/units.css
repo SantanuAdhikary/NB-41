@@ -1,0 +1,50 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.outer{
+    height: 100vh;
+    width: 80vw;
+    background-color: lightblue;
+}
+
+
+.outer > section{
+    height: 300px;
+    width: 800px;
+    background-color: red;
+}
+
+section > article{
+    height: 50%;
+    width: 50%;
+    background-color: yellow;
+}
+
+.box1{
+    border: 5px solid black;
+    padding: 20px;
+}
+.box2{
+    border: 5px solid red;
+    padding: 20px;
+}
+.box3{
+    border: 5px solid blue;
+    padding: 20px;
+}
+
+
+
+.box1{
+    font-size: 2rem;
+}
+.box2{
+    font-size: 2rem;
+}
+
+.box3 {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,73 @@
+
+
+/* 1. tagname selector */
+
+
+nav{
+    background-color: lightcoral;
+    height: 80px;
+}
+
+main{
+    height: 200px;
+    background-color: lightpink;
+}
+
+/* 2. Id Selector */
+
+#logo{
+    color:green;
+}
+
+#para1{
+    font-size: 20px;
+}
+
+
+/* 3. class Selector */
+
+.dark{
+    background-color: black;
+    height: 150px;
+    width: 250px;
+    color:white;
+    text-align: center;
+}
+
+.light{
+    background-color: lightskyblue;
+    height: 200px;
+    width: 300px;
+    text-align: center;
+}
+
+
+
+/* 4. Universal Selector */
+
+*{
+    font-style: italic;
+  
+}
+
+
+/* 5. group selector */
+
+.dark , .light , main
+{
+    border-radius: 15px;
+}
+
+
+#logo , #para1{
+    text-decoration: underline;
+}
+
+
+/* Font Property */
+
+#para2{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

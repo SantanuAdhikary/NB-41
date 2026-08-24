@@ -1,0 +1,82 @@
+
+nav{
+    background-color: burlywood;
+    height: 80px;
+}
+
+nav h1{
+    color:purple;
+}
+
+main{
+    height: 400px;
+    background-color: cadetblue;
+}
+
+main section{
+    background-color: yellow;
+    height: 280px;
+}
+
+main > h1{
+    text-align: center;
+}
+
+main > section >  article{
+    background-color: red;
+    height: 100px;
+}
+
+
+
+.outer > ol > #item4{
+    background-color: pink;
+}
+
+
+.outer > ol > #item4+li{
+    background-color: red;
+}
+
+
+.outer > ol > #item7{
+    background-color: yellow;
+}
+.outer > ol > #item7~li{
+    background-color: gray;
+}
+
+
+
+/* text property */
+
+.hero > h1{
+    text-align: center;
+    color:red;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    text-shadow: -4px -4px 2px black;
+}
+
+.hero > p{
+    font-size: 20px;
+    text-align: justify;
+    word-spacing: 5px;
+    text-indent: 100px;
+    line-height: 25px;
+}
+
+.hero > p > span{
+    font-weight: bold;
+    font-style: italic;
+
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-style: wavy;
+
+}
+
+
+
+
+

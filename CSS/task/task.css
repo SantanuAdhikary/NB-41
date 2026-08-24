@@ -1,0 +1,36 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#college{
+    text-align: center;
+    color: blue;
+}
+
+#report{
+    text-align: center;
+    color:green;
+    background-color: yellow;
+}
+
+#academic{
+    text-align: center;
+}
+
+#stuInfo , #marks{
+    text-align: center;
+    background-color: yellow;
+    color:brown
+}
+
+#stuCard{
+    background-color: lightcoral;
+}
+
+
+
+td,th{
+    text-align: center;
+}
+
+
