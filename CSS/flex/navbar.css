@@ -1,0 +1,42 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 90px;
+    background-color: blueviolet;
+    color:white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > ul{
+    display: flex;
+    gap:25px;
+}
+
+nav > ul > li{
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 19px;
+    text-shadow: 1px 2px 2px black;
+    cursor: pointer;
+}
+
+nav > ul >li:hover{
+    color:black;
+    text-shadow: 1px 2px 2px white;
+}
+
+nav > h2{
+    font-size: 40px;
+    letter-spacing: 1.7px;
+    text-shadow: 2px 3px 2px black;
+}
