@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.outer{
+    height: 100vh;
+    background: linear-gradient(skyblue,white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer > .inner{
+    height: 80%;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 4px 8px black;
+    border-radius: 15px;
+}
+
+.inner > nav{
+    height: 15%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+}
+
+nav > ul{
+    display: flex;
+    gap:25px;
+    list-style: none;
+}
+
+nav > ul > li{
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+nav button{
+    padding: 5px 15px;
+    border: 2px solid skyblue;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+
+nav button:hover{
+    box-shadow: 2px 2px 5px black;
+}
+.inner > main{
+    height: 70%;
+    /* background-color: lightgreen; */
+    display: flex;
+    padding: 0 3%;
+}
+
+main > .left{
+  flex-basis: 50%;
+  /* border: 3px solid black; */
+}
+
+main > .left > h1{
+    font-size: 45px;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+main > .left > p{
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.left > article{
+    /* background-color: red; */
+    display: flex;
+    gap:15px;
+}
+
+article > input{
+    flex-basis: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+article > button{
+    flex-basis: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+main > .right{
+  flex-basis: 50%;
+  /* border: 3px solid purple; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right > img{
+    height: 80%;
+}
+.inner > footer{
+    height: 15%;
+    /* background-color: antiquewhite;   */
+    display: flex;
+    padding: 0 3%;
+}
+
+footer > aside:nth-child(1)
+{
+    flex-basis: 50%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+footer > aside:nth-child(2)
+{
+    flex-basis: 50%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:20px;
+}
+
+
+footer > aside:nth-child(2) > img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+footer #qsn{
+    font-size: 19px;
+    font-weight: bold;
+}
+footer #ans{
+    font-size: 17px;
+    font-weight: bold;
+    color:skyblue;
+}
