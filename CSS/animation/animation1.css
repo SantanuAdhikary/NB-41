@@ -1,0 +1,71 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    background: linear-gradient(orangered,yellow);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main > .left{
+    height: 400px;
+    width: 400px;
+    border: 4px solid black;
+}
+
+.left > .circle{
+    height: 120px;
+    width: 120px;
+    border: 3px solid black;
+    border-radius: 50%;
+
+    animation: glowing 0.1s ease-in infinite;
+}
+
+@keyframes glowing {
+    
+    from{
+           background-color: white;
+    }
+    to{
+          background-color: black;
+    }
+}
+
+main > .right{
+    height: 400px;
+    width: 400px;
+    border: 4px solid black;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right > .spinner{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+    animation: spinning 1s linear infinite;
+}
+
+
+@keyframes spinning {
+    
+    from{
+       transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+
+    }
+}
