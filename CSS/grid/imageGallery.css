@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.outer{
+    height: 100vh;
+    background:linear-gradient(skyblue,white);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.outer > h1{
+    font-size: 50px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+.inner{
+    height: 80%;
+    width: 80%;
+    /* background-color:red; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    
+}
+
+.box{
+    /* border: 3px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: top;
+    transition: all 1s;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.7);
+}
+.box:hover{
+    background-position: center;
+}
+
+.box > h1{
+    color:white;
+    font-size: 45px;
+    letter-spacing: 1.4px;
+    text-shadow:  2px 2px 2px black;
+}
+
+#box1{
+    grid-row: span 2;
+    background-image: url("https://images.pexels.com/photos/35758270/pexels-photo-35758270.jpeg");
+}
+
+#box2{
+    background-image: url("https://media.istockphoto.com/id/2152660097/photo/tropical-paradise-beach-scene-for-background-or-wallpaper.jpg?s=1024x1024&w=is&k=20&c=ej3h-aL6Ef_iZWDDrZfxQNWSlnBmax3JuABm-82R73Q=");
+}
+
+#box3{
+    background-image: url("https://images.pexels.com/photos/32759035/pexels-photo-32759035.jpeg");
+}
+#box4{
+    grid-column: span 2;
+    background-image: url("https://images.pexels.com/photos/23121596/pexels-photo-23121596.png");
+}
+
+#box5{
+    background-image: url("https://media.istockphoto.com/id/1064550728/photo/sea-turtle-underwater-photo-marine-green-sea-turtle-closeup-wildlife-of-tropical-coral-reef.jpg?s=1024x1024&w=is&k=20&c=NFhq91Lv3ndDER_8OT5z9BQgN_FJvQYxZSrn_UjNbFM=");
+}
+
+#box6{
+    background-image: url("https://images.pexels.com/photos/1209610/pexels-photo-1209610.jpeg");
+}
+#box7{
+    background-image: url("https://images.pexels.com/photos/34987980/pexels-photo-34987980.jpeg");
+}

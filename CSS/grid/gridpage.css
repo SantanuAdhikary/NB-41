@@ -1,0 +1,30 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    background:linear-gradient(skyblue,white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15vh 70vh 15vh;
+}
+
+nav{
+    border: 4px solid black;
+    grid-column: span 2;
+}
+
+.left{  
+    border: 4px solid black;
+}
+.right{   
+    border: 4px solid black;
+}
+footer{   
+    border: 4px solid black;
+    grid-column: span 2;
+}
