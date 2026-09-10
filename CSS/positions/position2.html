@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed and sticky</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         nav{
+            height: 100px;
+            width: 100%;
+            background-color: #333;
+            position: fixed;
+            top:0px;
+            color:white;
+            z-index: 1;
+         }
+         header{
+            height: 300px;
+            background-color: antiquewhite;
+            margin-top: 100px;
+          
+         }
+
+         main{
+            height: 300px;
+            background-color: brown;
+         }
+
+         section{
+            height: 300px;
+            background-color: cadetblue;
+         }
+
+         article{
+            height: 300px;
+            background-color: lightcoral;
+         }
+
+         aside{
+            height: 300px;
+            background-color: limegreen;
+         }
+
+         footer{
+            height: 300px;
+            background-color: aliceblue;
+         }
+
+         main > h2{
+            color:white;
+            position:sticky;
+            top:150px;
+           
+         }
+
+         .container{
+            height: 490px;
+            width: 400px;
+            margin: 20px auto;
+            border: 3px solid red;
+            background-color: #f4f4f4f4;
+            position: relative
+         }
+
+         .box{
+            height: 150px;
+            width: 200px;
+            position: absolute;
+         }
+
+         #box1{
+            background-color: lightblue;
+            z-index: 100;
+         }
+         #box2{
+            background-color: lightcoral;
+            right:50px;
+            top:50px;
+            z-index: 10;
+         }
+         #box3{
+            background-color: lightslategrey;
+            top:70px;
+            left:20px;
+            z-index: 101;
+         }
+
+    </style>
+</head>
+<body>
+    <nav>
+         <h3> i am navbar</h3>
+     </nav>
+    <header>
+         <h1>welcome to css positions</h1>
+         <p>Lorem ipsum dolor sit amet.</p>
+    </header>
+    <main>
+        <h2>I am sticky</h2>
+    </main>
+    <section></section>
+    <article></article>
+    <aside></aside>
+    <footer></footer>
+
+    <div class="container">
+         <div class="box" id="box1">box-1</div>
+         <div class="box" id="box2">box-2</div>
+         <div class="box" id="box3">box-3</div>
+    </div>
+</body>
+</html>

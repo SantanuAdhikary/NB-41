@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>burger</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         .outer{
+            height: 100vh;
+            background: linear-gradient(white,#222);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .inner{
+            height: 500px;
+            width: 500px;
+            background: linear-gradient(yellow,orangered);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 5px 10px 10px black;
+         }
+
+         #discount{
+            height: 200px;
+            position: absolute;
+            bottom:40px;
+            z-index: 1;
+            transition: all 0.5s ease-in;
+         }
+
+         #discount:hover{
+            transform: rotate(360deg);
+         }
+         #burger{
+            position: absolute;
+           bottom:15px;
+         }
+
+         #drinks{
+            position: absolute;
+            bottom:30px;
+            right:40%;
+         }
+    </style>
+</head>
+<body>
+    
+    <div class="outer">
+         <div class="inner">
+
+            <img src="./discount.png" alt="" id="discount">
+            <img src="./burger.png" alt="" id="burger">
+            <img src="./drinks.png" alt="" id="drinks">
+             
+         </div>
+    </div>
+</body>
+</html>
