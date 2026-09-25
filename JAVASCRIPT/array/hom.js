@@ -97,3 +97,21 @@ unsorted2.sort((a,b)=>{
 
 console.log(unsorted2)
 
+
+// ! 5. reduce() method 
+
+
+let ages = [5,10,15,20,25]
+
+ let sum = ages.reduce((acc,ele)=>{
+     return acc + ele;
+  },0)
+
+
+  console.log(sum)
+
+let mul = ages.reduce((acc,ele)=>{
+    return acc * ele;
+},1)
+
+console.log(mul)
