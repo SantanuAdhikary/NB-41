@@ -912,3 +912,132 @@ eg:
 
         console.log(numbers.slice(1,4))  // [20, 30, 40]
 ```
+
+### Higher Order Array Methods 
+
+**1. map()**
+
+* map() is one higher order array method used to traverse the array and we can perform some operation with all the array elements.
+
+* map() method will return one new array, it does not modify the original array. 
+
+* this method takes 3 parameters. 
+  first parameter identify as element 
+  second parameter identify as index 
+  third parameter identify as array
+
+
+*syntax*
+
+   arrayname.map((ele,index,array)=>{
+
+   })
+
+
+```js
+
+
+      let price = [1000,750,250,500]
+
+      let updatedPrice = price.map((ele)=>{
+        return ele + 200;
+      })
+
+      console.log(updatedPrice)  // [ 1200, 950, 450, 700 ]
+      console.log(price)
+
+
+
+      let subjects = ['sql','java','node','python']
+
+
+      let upperArr = subjects.map((ele)=>{
+          return ele.toUpperCase(); 
+      })
+
+      console.log(upperArr)  // [ 'SQL', 'JAVA', 'NODE', 'PYTHON' ]
+```
+
+**2. filter()**
+
+* filter() is one higherorder array method used to traverse the array and it checks the condition.
+
+* it returns one new array , there the element will be stored which are matching with the condition.
+
+* filter() method also can take 3 parameters, (element,index,array)
+
+```js
+      let marks = [56,75,59,80,65,90,45,88,70]
+
+      let highest= marks.filter((ele)=>{
+              return ele >= 70
+      })
+      console.log(highest)  // [ 75, 80, 90, 88, 70 ]
+```
+
+* this method will not change the original array, it will return one new array.
+
+
+**3. forEach()**
+
+* this is also one higher order array method and it is used to traverse the array.
+
+* it can take 3 parameters (element,index,array)
+
+* the main difference b/w map() and forEach(), forEach method can't return any value.
+
+
+**4. reduce()**
+
+* reduce() method is one higher order array method , it can take 4 parameters (accumulator , element , index , array)
+
+* it is used to make the array into single value.
+
+* by default accumulator value will be first element value.
+
+* when we want to add , multiply all the elements we can use reduce method.
+
+```js
+
+    let nums = [1,2,3,4,5]
+
+    let sum = nums.reduce((acc,ele)=>{
+      return acc + ele;
+    },0)
+
+    console.log(sum)          // 15
+
+    let multiply = nums.reduce((acc,ele)=>{
+      return acc * ele;
+    },1)
+
+    console.log(multiply)     // 120
+```
+
+**5. sort()**
+
+* sort() method is used to sort the array both in ascending and descending order.
+
+* this method will change the original array.
+
+* it can take 2 parameters. 
+  if we are return first - second parameter it will give ascending order 
+  if we are return second - first parameter it will give descending order 
+
+```js
+
+      let unsorted = [5,1,4,3,2]
+
+      let asc = unsorted.sort((a,b)=>{
+        return a - b;
+      })
+
+      console.log(unsorted)
+      console.log(asc)
+
+      let dsc = unsorted.sort((a,b)=>{
+        return b - a; 
+      })
+
+```
+
