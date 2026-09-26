@@ -1041,3 +1041,280 @@ eg:
 
 ```
 
+## Object
+
+* anything that have physical existence is called as Object.
+
+* in javascript Object is key and value pairs enclosed with curly braces {}.
+
+* these key-value pairs are called properties, all the properties will be separated by comma ( , )
+
+* all the key-value will be separated by colon (:)
+
+* key should be unique, value can be duplicate.
+
+* we can give any datatype as value (primitive , non-primitive)
+
+* we can create object in 3 ways in javascript.
+  * by using object literals 
+  * by using class 
+  * by using functional constructor
+
+
+### Object by using literals
+
+
+```js
+let student = {
+    sname : "miller",
+    sid : 101,
+    isStudying : false,
+    skills : ["sql","java","python","webtech"],
+    address : {
+                city:"chennai",
+                pin:543216
+             },
+    work : function()
+            {
+                console.log("love to sleep")
+            }
+}
+
+console.log(student)
+
+```
+
+
+**How to Access Property**
+
+*syntax*
+        objectname.key
+
+```js
+        console.log(student.sname); //  miller
+```
+
+**How to modify**
+
+*syntax*
+          objectname.key = value ;
+
+ ```js
+          student.sid = 210;
+ ``` 
+
+ **How to add new property**
+
+ * adding new property and modifying the old property syntax is same.
+ * if the key is present then it will modify, if the key is not present then it will add the property.
+
+ ```js
+           student.phNo = 9876543210;
+ ```
+
+ **How to delete any Object property**
+
+ *syntax*
+          delete objectname.key
+
+  ```js
+           delete student.isStudying;
+  ```
+
+
+  **Accessing Object by using [] square bracket**
+
+  *syntax*
+                objectname["key"]
+        
+  ```js
+           console.log(student["sname"]); // miller 
+           console.log(student[sname]);  // error 
+  ```
+
+
+### Object Methods 
+
+**1. Object.keys()**
+
+ * this method is used to get all the keys in the form of array.
+
+ ```js
+        let marker = {
+            brand : "camlin",
+            price : 50,
+            color : "blue",
+            canWrite : true
+        }
+
+        let keys = Object.keys(marker)
+        console.log(keys)        // [ 'brand', 'price', 'color', 'canWrite' ]
+ ```
+
+ **2. Object.values()**
+
+ * it is used to return all the values of object in the form of array.
+
+ ```js
+      let values = Object.values(marker)
+      console.log(values)    // [ 'camlin', 50, 'blue', true ]
+ ```
+
+ **3. Object.entries()**
+
+ * it will return one nested array where all the key-value pairs will be stored each one arrays.
+
+ ```js
+      let keyvalue = Object.entries(marker)
+      console.log(keyvalue)
+      /*
+           [
+              [ 'brand', 'camlin' ],
+              [ 'price', 50 ],
+              [ 'color', 'blue' ],
+              [ 'canWrite', true ]
+           ]
+     */
+ ```
+
+ **4. Object.freeze()**
+
+ * this method is used to make the object frozen.
+ * we can't perform any CRUD operation (add,modify,delete) with the object.
+
+ **5. Object.isFrozen()**
+
+ * it is used to check object is frozen or not. 
+ * it will return boolean value.
+
+ ```js
+        
+        let ob1 = {
+            obName : "laptop",
+            price : 65000,
+            color:"black"
+        }
+
+        console.log("before freeze")
+        console.log(ob1)
+
+        Object.freeze(ob1);
+
+        console.log("after freeze")
+
+        ob1.color = "blue"     // we can't modify
+        ob1.brand = "hp"      // we can't add 
+        delete ob1.price;    // we can't delete 
+
+        console.log(ob1)
+
+
+        // ! Object.isFrozen()
+
+        console.log(Object.isFrozen(ob1))        // true
+        console.log(Object.isFrozen(marker))    // false 
+ ```
+ 
+
+ **6. Object.seal()**
+
+ * this method is similar to `Object.freeze()` here also we can't add or delte any property but here we can modify the property.
+
+ **7. Object.isSealed()**
+
+ * this method is used to check object is sealed or not.
+ * it will return boolean value.
+
+
+ ```js
+        
+        let ob2 ={
+            obName : "projector",
+            brand : "epson",
+            price : 75000
+        }
+
+
+        console.log("before seal")
+        console.log(ob2)
+
+        Object.seal(ob2)
+
+        console.log("after seal")
+        ob2.roomNO = 401                // we can't add
+        delete ob2.price               // we can't delete
+        ob2.price = 65000             // modification is possible
+
+        console.log(ob2)
+
+
+        // ! 7. Object.isSealed()
+
+        console.log(Object.isSealed(ob2))  // true
+        console.log(Object.isSealed(marker))  // false
+        console.log(Object.isSealed(ob1))   // true
+ ```
+
+ **8. Object.assign()**
+
+ * this method is used to combine two or more than two objects and it returns one new object.
+
+ *syntax*
+           Object.assign(target,source1,source2,...... source3)
+
+```js          
+      let ob3 = {
+          name : "raja"
+      }
+      let ob4 = {
+          gf : "rani"
+      }
+      let mergedOb = Object.assign({},ob3,ob4)
+      console.log(mergedOb)  // { name: 'raja', gf: 'rani' }
+      
+```
+
+
+**9. hasOwnProperty()**
+
+* this method is used to know any property (key) is present or not inside the object.
+
+* it will return boolean.
+
+```js
+      let stu ={
+          sname : "rahul",
+          age : 10 
+      }
+
+      console.log(stu.hasOwnProperty("sname"))  // true
+      console.log(stu.hasOwnProperty("height")) // false
+```
+
+
+### class and Object in js
+
+```js
+      class student{
+
+          sname ; 
+          sid ; 
+          sage ; 
+
+          constructor(sname , sid , sage)
+          {
+                this.sname = sname ; 
+                this.sid = sid ; 
+                this.sage = sage;
+          }
+      }
+
+      let stu1 = new student("dhoni",7,10);
+      let stu2 = new student("rohit",45,8);
+      let stu3 = new student("virat",18,6);
+
+      console.log(stu1)
+      console.log(stu2)
+      console.log(stu3)
+
+```
