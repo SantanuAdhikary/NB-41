@@ -189,3 +189,35 @@ console.log(combined2)
 
 console.log(watch.hasOwnProperty("price"))  // true
 console.log(watch.hasOwnProperty("color")) // false 
+
+
+
+// ! how to create object by using class
+
+
+class Student{
+   
+    sname ; 
+    sid ; 
+
+    constructor(sname , sid)
+    {
+       this.sname = sname ; 
+       this.sid = sid; 
+    }
+
+    stuDetails()
+    {
+        console.log(`student name is ${this.sname}`)
+        console.log(`student id is ${this.sid}`)
+    }
+}
+
+let stu1 = new Student("rahul",1)
+console.log(stu1)
+stu1.stuDetails();
+
+console.log("------------------------------")
+let stu2 = new Student("rohit",2)
+console.log(stu2)
+stu2.stuDetails();
