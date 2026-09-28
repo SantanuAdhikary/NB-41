@@ -1318,3 +1318,109 @@ console.log(student)
       console.log(stu3)
 
 ```
+
+
+
+## Object Destructure 
+
+* Object destructuring is a feature used to extract multiple properties from an object and assign them to distinct variables using a single statement.
+
+* for performing this we need { } , inside that all the keyname we have to provide, so that we can use them as separate variables.
+
+```js
+
+    let student = {
+        sname : "dhoni",
+        age : 7 , 
+        isPlayer : true,
+        skills : ["math","rhymes","gk","drawing"]
+    }
+   
+    let {sname ,skills,isPlayer,age} = student
+
+    console.log(sname)
+    console.log(age)
+    console.log(skills)
+```
+
+
+## Rest Parameter
+
+* rest parameter allows a function to accept an indefinite number of arguments as an array.
+
+* it is denoted by three dots (...)
+
+* we can use this only for the last parameter.
+
+## Spread Operator 
+
+* it is used for an iterable (like an array or string) or an object to be expanded or "unpacked" into individual elements or properties.
+
+* it is also denoted by three dots (...)
+
+```js
+   let frontend = ["html","css","js","react"]
+  let backend = ["node","express","mongodb"]
+
+  console.log(frontend)      // [ 'html', 'css', 'js', 'react' ]
+  console.log(...frontend)  // html css js react
+```
+
+
+**use of spread operator**
+
+ *merge arrays and object*
+
+ ```js
+   
+//  merge two arrays by using spread
+
+  let fullstack = [...frontend,...backend]
+  console.log(fullstack) 
+
+// ['html','css','js','react','node','express','mongodb']
+
+
+//  merge two objects by using spread
+
+    let ob1 ={
+        obname : "pen"
+    }
+
+    let ob2 ={
+        price : 30
+    }
+
+    let ob3 = {...ob1,...ob2}
+    console.log(ob3)             // {obname : "pen", price : 30}
+ ```
+
+
+ ## shallow copy
+
+ * when we are assigning any object or array inside any variable if we make any change in any one of them it will modify both of them.
+
+ ```js
+   let subjects = ["java","python","sql"]
+   let copy = subjects ; 
+
+   copy.push("webtech");
+
+   console.log(copy)     // ["java","python","sql",webtech]
+   console.log(subjects) // ["java","python","sql",webtech]
+ ```
+
+ ## Deep Copy
+
+ ```js
+
+   let subjects = ["java","python","sql"]
+
+   let copy = [...subjects];
+
+   copy.push("webtech")
+
+  console.log(copy)      // ["java","python","sql",webtech]
+  console.log(subjects) // ["java","python","sql"]
+ ```
+
