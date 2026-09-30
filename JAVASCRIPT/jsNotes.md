@@ -1424,3 +1424,295 @@ console.log(student)
   console.log(subjects) // ["java","python","sql"]
  ```
 
+
+
+
+ ## JSON 
+
+* JSON (JavaScript Object Notation) is a lightweight data-interchange format 
+
+* that is easy for humans to read and write, and easy for machines to parse and generate.  
+ 
+### Advantages of JSON:  
+
+ **Human-Readable:**
+
+*  JSON's structure is easy for developers to understand and  write. 
+
+**Lightweight:** 
+
+* JSON is a minimal format that reduces the size of the data being transmitted. 
+
+**Language-Independent:**
+
+* JSON can be used with many programming languages, 
+* including JavaScript, Python, Ruby, Java, etc. 
+
+
+### JSON methods 
+
+**1.JSON.stringify()**
+
+ * this method is used to convert any javascript object into json.
+
+**2. JSON.parse()**
+
+ * this method is used to again convert that json data into javascript object.
+
+
+```js
+
+        let emp = {
+            ename : "miller",
+            age : 10 , 
+            isEmp : true
+        }
+
+        console.log(emp)
+        console.log(typeof emp)
+
+
+        // ! JSON.stringify()
+
+        let jsondata = JSON.stringify(emp);
+        console.log(jsondata)
+        console.log(typeof jsondata)
+
+
+
+        // ! JSON.parse()
+
+        let emp2 = JSON.parse(jsondata)
+        console.log(emp2)
+        console.log(typeof emp2)
+
+        // ! JSON methods apply on array 
+
+        let arr = [10,20,30,40]
+        console.log(arr)
+        console.log(typeof arr)   // object
+
+        let arr2 = JSON.stringify(arr)
+        console.log(arr2)
+        console.log(typeof arr2)   // string
+
+        let arr3 = JSON.parse(arr2)
+        console.log(arr3)         // object 
+```
+
+
+
+### deep copy by using JSON methods
+
+```js
+      let arr10 = [10,20,30]
+
+      let copy = JSON.parse(  JSON.stringify(arr10) );
+
+      copy.push("html")
+      arr10.shift()
+
+      console.log(copy)    // [10, 20, 30, 'html']
+      console.log(arr10)  // [20, 30]
+```
+
+## Timing Function 
+
+### setTimeout()
+
+* it is one built-in function in javascript used to execute any function after the specific time.
+
+* this is one asynchronized function , it executes once after all the synchronized code got executed.
+
+* it can two parameters , first one is callback function , second one is time in miliseconds.
+
+```js
+setTimeout(()=>{
+    console.log("hi")
+})
+
+console.log("hello")
+
+setTimeout(()=>{
+    console.log("how are you")
+},3000)
+
+console.log("bye")
+
+
+/*
+
+output : 
+
+hello
+bye 
+hi
+how are you
+
+*/ 
+
+```
+
+### setInterval()
+
+* this function is used to execute any callback-function repeatedly after some specific time.
+
+```js
+        setInterval(()=>{
+           console.log("hello everyone")
+        },1000)
+
+        /*
+          output : 
+                 hello everyone 
+                 hello everyone 
+                 .
+                 .
+                 .
+        */
+```
+
+### clearTimeout()
+
+* this method is used to cancel a timer previously established by calling setTimeout()
+
+* for doing this when we are creating any setTimeout() we have to store the id in one variable. then that variable we have to pass as an argument to the clearTimeout().
+
+
+```js
+        let t1 = setTimeout(()=>{
+           console.log("hi")
+        },5000)
+
+        clearTimeout(t1);
+```
+
+### clearInterval()
+
+* this method is used to cancel a timer previously established by calling setInterval()
+
+* for doing this when we are creating any setInterval() we have to store the id in one variable. then that variable we have to pass as an argument to the clearInterval().
+
+
+```js
+        let t2 = setInterval(()=>{
+           console.log("hello")
+        },1000)
+
+        clearInterval(t2);
+```
+
+
+### Date Object 
+
+* we can create object of Date by using `new` keyword.
+
+
+```js
+         let date = new Date();
+```
+
+**Methods**
+
+ **time related methods**
+
+ *getHours()* 
+ *getMinutes()*
+ *getSeconds()*
+ *getMilliseconds*
+ *toLocaleTimeString()* 
+
+ *getFullYear()*
+ *getDate()*
+ *getMonth()* 
+  * it will give number where 0-> jan , 1-> feb , 2-> march and so on.
+
+ *getDay()*
+   * it will also give number where 0->sun , 1-> mon , 2->tue and so on.
+
+ *toLocaleDateString()*  
+
+
+## Difference between == and === 
+
+* == operator checks only the value not the datatype, but === checks the value and datatype.
+
+```js
+      let num1 = 20 ; 
+      let num2 = "20"; 
+
+
+      console.log(num1 == num2) ;  // true
+      console.log(num1 === num2) ; // false
+```
+
+## Difference Between for of and for in loop. 
+
+* for in loop 
+    array => it will give index 
+    string => it will give index 
+    object => it will give key
+
+* for of loop 
+    array => it will give elements
+    string => it will give characters
+    object => not possible ❌
+
+
+```js
+
+
+// ! use of for of and for in loop in array 
+
+let arr = [10,20,40,90]
+
+for(let ele of arr)
+{
+    console.log(ele)
+}
+
+console.log("--------------------")
+
+for(let i in arr)
+{
+    console.log(i, arr[i])
+}
+
+// ! use of for of and for in loop in string 
+
+
+let str = "java"
+
+for(let ch of str)
+{
+    console.log(ch)
+}
+
+console.log("---------------")
+for(let i in str)
+{
+    console.log(i, str[i])
+}
+
+console.log("---------------------------------------------")
+
+// !  for of and for in loop in object 
+
+let ob = {
+    sname : "miller",
+    sage : 10 , 
+    isStudent : true
+}
+
+for(let key in ob)
+{
+    console.log(key)
+}
+
+// not possible 
+
+ for(let x of ob)
+ {
+     console.log(x)  
+ }
+```
