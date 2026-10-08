@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse Event</title>
+
+    <style>
+         section{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 20px;
+         }
+
+         article{
+           height: 200px;
+           width: 200px;
+           background-color: darkred;
+           color:white;
+           border-radius: 10px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 60px;
+         }
+    </style>
+</head>
+<body>
+    
+    <h1> Mouse Event in Javascript</h1>
+
+    <button onclick="add()">click</button>
+    <button ondblclick="sub(70,20)">subtract</button>
+
+    <h2 id="myName">santanu adhikary</h2>
+    <button onclick="hideText()">hide</button>
+    <button onclick="showText()">show</button>
+
+    <h1>changing background color</h1>
+
+    <button onclick="changeColor('red')">red</button>
+    <button onclick="changeColor('blue')">blue</button>
+    <button onclick="changeColor('green')">green</button>
+    <button onclick="changeColor('yellow')">yellow</button>
+    <button onclick="changeColor('white')">white</button>
+
+    <section onmouseover="changeBg()" onmouseout="changeBg2()">
+        <h2> i am section</h2>
+    </section>
+
+
+    <article onmousemove="increaseNumber()">
+        <h2> 0 </h2>
+    </article>
+
+    <script src="./mouseEvent.js"></script>
+</body>
+</html>
